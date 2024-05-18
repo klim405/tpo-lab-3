@@ -1,0 +1,269 @@
+{
+  "id": "ccd064e8-ed4a-4814-9743-53b1e97edc67",
+  "version": "2.0",
+  "name": "tpo-lab-3",
+  "url": "https://www.youtube.com",
+  "tests": [{
+    "id": "f337086d-04ae-46b1-a83f-f1bfefd1feb0",
+    "name": "SearchInput",
+    "commands": [{
+      "id": "b24e8b06-c40b-4c2e-bf2b-aaeec216f588",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1dd9e405-9685-435b-ba45-a6c67df24748",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1047x775",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f77f6cf-7d5f-450b-a0fb-ef5cf81fc07a",
+      "comment": "",
+      "command": "click",
+      "target": "//*[@id=\"search-icon-legacy\"]/yt-icon/yt-icon-shape/icon-shape/div",
+      "targets": [
+        ["css=#search-icon-legacy .yt-spec-icon-shape > div", "css:finder"],
+        ["xpath=//button[@id='search-icon-legacy']/yt-icon/yt-icon-shape/icon-shape/div", "xpath:idRelative"],
+        ["xpath=//ytd-searchbox/button/yt-icon/yt-icon-shape/icon-shape/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b96b48d9-8d89-4dcc-aae2-f191e941f63e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageurl_1"
+    }, {
+      "id": "af13b584-6a08-4153-9391-35d127859655",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl_1",
+      "targets": [],
+      "value": "https://www.youtube.com/"
+    }, {
+      "id": "09875197-97c4-438c-8c43-ab1174b9324a",
+      "comment": "",
+      "command": "click",
+      "target": "name=search_query",
+      "targets": [
+        ["name=search_query", "name"],
+        ["css=#sb_ifc50 > #search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='sb_ifc50']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f52350ac-695a-4633-ad07-6d80a57de2ca",
+      "comment": "",
+      "command": "click",
+      "target": "id=contents",
+      "targets": [
+        ["id=contents", "id"],
+        ["css=.ytd-two-column-browse-results-renderer > #contents", "css:finder"],
+        ["xpath=//div[@id='contents']", "xpath:attributes"],
+        ["xpath=//div[@id='primary']/ytd-rich-grid-renderer/div[6]", "xpath:idRelative"],
+        ["xpath=//div[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee8a09d4-05ec-4022-84fd-482e75abf4ef",
+      "comment": "",
+      "command": "type",
+      "target": "name=search_query",
+      "targets": [
+        ["name=search_query", "name"],
+        ["css=#sb_ifc50 > #search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='sb_ifc50']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "котики"
+    }, {
+      "id": "efd1793e-b63f-4437-8d7d-a0fd9ed78980",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=search_query",
+      "targets": [
+        ["name=search_query", "name"],
+        ["css=#sb_ifc50 > #search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='sb_ifc50']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "c7146dcc-e533-45d2-a3a7-b2987dc57022",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageurl_2"
+    }, {
+      "id": "1ebf25d1-9ce7-4e31-aafb-b3fc4c2d2376",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl_2",
+      "targets": [],
+      "value": "https://www.youtube.com/results?search_query=%D0%BA%D0%BE%D1%82%D0%B8%D0%BA%D0%B8"
+    }]
+  }, {
+    "id": "0cd5cec4-ab88-4583-9843-1b512c5a3c52",
+    "name": "VideoUrl",
+    "commands": [{
+      "id": "186ad5c2-ff13-474f-b2ba-df3eb4e0dc93",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.youtube.com/watch?v=MOEtQSswu3s",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41f1eb3e-3399-4dd0-9abe-a76411440734",
+      "comment": "",
+      "command": "assertText",
+      "target": "//*[@id=\"title\"]/h1/yt-formatted-string",
+      "targets": [],
+      "value": "Самые смешные животные / Приколы с котами и собаками 2023"
+    }]
+  }, {
+    "id": "0bac3bd2-01b0-4a42-8673-6644cb381873",
+    "name": "VideoWrongUrl",
+    "commands": [{
+      "id": "31cd1e79-7695-42ff-890e-3755aa269b6c",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.youtube.com/watch?v=MOEtQSjjswu",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eadab3c1-9a46-4144-b790-a2029900a048",
+      "comment": "",
+      "command": "assertText",
+      "target": "//*[@id=\"contents\"]/ytd-background-promo-renderer/div[1]/div",
+      "targets": [],
+      "value": "Это видео больше не доступно."
+    }, {
+      "id": "177d1c04-47a7-4ebf-a254-e005e7c7c0ba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.yt-spec-button-shape-next--outline > yt-touch-feedback-shape:nth-child(2) .yt-spec-touch-feedback-shape__fill",
+      "targets": [
+        ["css=.yt-spec-button-shape-next--outline > yt-touch-feedback-shape:nth-child(2) .yt-spec-touch-feedback-shape__fill", "css:finder"],
+        ["xpath=(//div[@id='buttons']/ytd-button-renderer/yt-button-shape/a/yt-touch-feedback-shape/div/div[2])[2]", "xpath:idRelative"],
+        ["xpath=//ytd-background-promo-renderer/div[2]/ytd-button-renderer/yt-button-shape/a/yt-touch-feedback-shape/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b555742d-7cf1-4c58-a8c1-d48216a0df61",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "c4256935-f9d4-4598-b853-faefe0e84cf0",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "https://www.youtube.com/"
+    }]
+  }, {
+    "id": "987c3fb8-5581-4334-9f75-2c863bf56060",
+    "name": "ShortsUpButton",
+    "commands": [{
+      "id": "d9cc70cb-31ba-4434-9de3-c448ae2e8532",
+      "comment": "",
+      "command": "open",
+      "target": "/shorts",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56b72a71-efdf-4505-8dfa-e26f8e8e67a1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1221x775",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c325cce-71ff-4520-a01b-9dc36d4db404",
+      "comment": "Проверка нет ли кнопки наверх",
+      "command": "assertElementNotPresent",
+      "target": "//*[@id=\"navigation-button-up\"]/ytd-button-renderer/yt-button-shape/button/yt-touch-feedback-shape/div",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7794529c-8ab0-43b2-85d2-20ead17bdb50",
+      "comment": "Переключить на следующий shorts",
+      "command": "click",
+      "target": "xpath=//div[@id='navigation-button-down']/ytd-button-renderer/yt-button-shape/button/yt-touch-feedback-shape/div/div[2]",
+      "targets": [
+        ["css=.yt-spec-button-shape-next--size-xl .yt-spec-touch-feedback-shape__fill", "css:finder"],
+        ["xpath=//div[@id='navigation-button-down']/ytd-button-renderer/yt-button-shape/button/yt-touch-feedback-shape/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/ytd-button-renderer/yt-button-shape/button/yt-touch-feedback-shape/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c155b2b2-6646-4422-a2db-8cae5c11c518",
+      "comment": "Проверка есть ли кнопки наверх",
+      "command": "assertElementPresent",
+      "target": "//*[@id=\"navigation-button-up\"]/ytd-button-renderer/yt-button-shape/button/yt-touch-feedback-shape/div",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93b35309-ee95-4279-8935-fa53fc8bd72b",
+      "comment": "Переключить на предидущий shorts",
+      "command": "click",
+      "target": "//*[@id=\"navigation-button-up\"]/ytd-button-renderer/yt-button-shape/button/yt-touch-feedback-shape/div/div[2]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e91c6a67-f857-4459-b5cd-6d6609b3f50c",
+    "name": "ShortsAuthor",
+    "commands": [{
+      "id": "2ef81822-bf40-4e1d-a32d-735d6e4ff1e1",
+      "comment": "",
+      "command": "open",
+      "target": "/shorts",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb0d9139-7e0a-4fbb-ab51-c40b8c14c122",
+      "comment": "",
+      "command": "storeText",
+      "target": "//*[@id=\"text\"]/a[@spellcheck='false']",
+      "targets": [],
+      "value": "chanel_tag"
+    }, {
+      "id": "87f7b324-bf24-4281-a4ef-585353c200eb",
+      "comment": "",
+      "command": "click",
+      "target": "//*[@id=\"text\"]/a[@spellcheck='false']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a8a0dc3-7320-4494-bec6-3efc0546b08f",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//yt-formatted-string[@id='channel-handle'])[2]",
+      "targets": [],
+      "value": "${chanel_tag}"
+    }]
+  }],
+  "suites": [{
+    "id": "ee005e97-ed12-4d1b-9d9d-f3e1fdd779b0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f337086d-04ae-46b1-a83f-f1bfefd1feb0"]
+  }],
+  "urls": ["https://www.youtube.com/"],
+  "plugins": []
+}
